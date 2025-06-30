@@ -1,5 +1,15 @@
 - name : diff task and global level variables 
   hosts: web
+  var_prompt:
+   - name: please enter the course
+     prompt: course
+     private: no 
+   - name: please enter the duration 
+     prompt: duration
+     private: no 
+   - name: pleasse enter the trainner 
+     prompt: trainner
+     private: yes  
   vars:
     - course: DevOps with AWS 
     - trainner: kedarnath 
@@ -14,5 +24,9 @@
         msg: "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
     
     - name: play level variables
+      ansible.builtin.debug:
+        msg:  "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
+
+    - name: vars from prompt 
       ansible.builtin.debug:
         msg:  "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
