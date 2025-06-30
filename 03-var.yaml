@@ -2,13 +2,13 @@
   hosts: web
   vars_prompt:
    - name: please enter the course
-     prompt: course
+     prompt: course_1
      private: no 
    - name: please enter the duration 
-     prompt: duration
+     prompt: duration_1
      private: no 
    - name: pleasse enter the trainner 
-     prompt: trainner
+     prompt: trainner_1
      private: yes  
   vars:
     - course: DevOps with AWS 
@@ -29,4 +29,4 @@
 
     - name: vars from prompt 
       ansible.builtin.debug:
-        msg:  "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
+        msg:  "hello current running course is :{{course_1}}, duration may takes: {{duration_1}} & trainner is {{trainner_1}}"
