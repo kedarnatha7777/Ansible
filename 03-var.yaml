@@ -1,0 +1,10 @@
+- name : diff task and global level variables 
+  hosts: web
+  tasks:
+    - name: task level variables
+      vars:
+        - course: ansible 
+        - duration: 7 days 
+        - trainner: kishore 
+      ansible.builtin.debug:
+        msg: "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
