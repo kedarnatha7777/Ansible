@@ -1,5 +1,9 @@
 - name : diff task and global level variables 
   hosts: web
+  vars:
+    - course: DevOps with AWS 
+    - trainner: kedarnath 
+    - duration: 120 days 
   tasks:
     - name: task level variables
       vars:
@@ -8,3 +12,7 @@
         - trainner: kishore 
       ansible.builtin.debug:
         msg: "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
+    
+    - name: play level variables
+      ansible.builtin.debug:
+        msg:  "hello current running course is :{{course}}, duration may takes: {{duration}} & trainner is {{trainner}}"
