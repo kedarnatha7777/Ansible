@@ -5,7 +5,7 @@
     - name: install nginx 
       ansible.builtin.dnf:
         name: nginx
-        start: present  
+        start: latst  
     - name: start and enable the service 
       ansible.builtin.service:
         name: nginx
