@@ -1,6 +1,6 @@
 - name : diff task and global level variables 
   hosts: web
-  var_prompt:
+  vars_prompt:
    - name: please enter the course
      prompt: course
      private: no 
