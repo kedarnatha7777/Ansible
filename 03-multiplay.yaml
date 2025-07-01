@@ -1,0 +1,13 @@
+- name : multi play -01 
+  hosts: localhost 
+  takes:
+    - name: print massage from play-01 
+      ansible.builtin.debug:
+        msg: "from play -01 and task -01 "
+
+- name: task -02 amd play-01 
+  hosts: localhost
+  takes: 
+    - name: this is form task 2 
+      ansible.builtin.debug:
+        msg: "from play-01 and task -02 "
