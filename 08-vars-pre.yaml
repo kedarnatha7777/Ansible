@@ -12,8 +12,9 @@
   tasks:
     - name: checking the variable preference 
       vars:
-        - wish: "morning from the task  variable"
+        #- wish: "morning from the task  variable"
       ansible.builtin.debug: 
         msg: "hello ramesh .. {{wish}}"
 
-    
+
+# 1 st pre is Arguments , task level ,   
