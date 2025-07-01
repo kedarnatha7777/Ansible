@@ -1,4 +1,4 @@
-- name : check goven number is grater than 18 
+- name : check given number is grater than 18 
   hosts: localhost
   vars_prompt:
     - name: NUMBER 

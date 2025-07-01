@@ -1,0 +1,6 @@
+- name : print the default values 
+  hosts: localhost
+  tasks:
+    - name: default values are 
+      ansible.builtin.debug:
+        msg: "we are learning the {{course | default (;ansible') }}"
