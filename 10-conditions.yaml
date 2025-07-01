@@ -3,7 +3,7 @@
   tasks:
     - name: check an user is existed or not  
       ansible.builtin.command: id expense 
-      registor: user_expense 
+      register: user_expense 
       ignore_errors: True 
 
     - name: user_expense output 
