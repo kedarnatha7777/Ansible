@@ -12,7 +12,7 @@
   tasks:
     - name: checking the variable preference 
       vars:
-        - wish: "wishes from the task  variable"
+        - wish: "morning from the task  variable"
       ansible.builtin.debug: 
         msg: "hello ramesh .. {{wish}}"
 
