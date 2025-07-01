@@ -10,10 +10,10 @@
       - jenkins 
       - k8s 
     - experience:
-      devops: 3 
-      ansible: 1 
-      docker: 4 
-      k8s: 2  
+       devops: 3 
+       ansible: 1 
+       docker: 4 
+       k8s: 2  
       
   tasks:
     - name: print the data types 
