@@ -1,0 +1,6 @@
+- name : vars fom ini inweb group 
+  hosts: web
+  tasks:  
+    - name: vars from ini 
+      ansible.builtin.debug:
+        msg: "hello student: {{student}} now we are going to place {{location}} within {{money}} rupiees "
