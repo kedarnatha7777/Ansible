@@ -4,3 +4,13 @@
     - name: default values are 
       ansible.builtin.debug:
         msg: "we are learning the {{course | default ('ansible') }}"
+
+- name : conver in to uppper case 
+  hosts: localhost
+  vars:
+    wishes: "hello good morning "
+  tasks:
+    - name: convet in to upper 
+      ansible.builtin.debug:
+        msg: {{wishes | UPPER }}
+  
