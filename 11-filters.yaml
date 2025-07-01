@@ -12,5 +12,22 @@
   tasks:
     - name: convet in to upper 
       ansible.builtin.debug:
-        msg: {{wishes | UPPER }}
+        msg: "{{ wishes | UPPER }}"
   
+- name: convert upper to lower 
+  hosts: localhost
+  vars:
+    wishes: " HELLO GOOD MORNING "
+  tasks:
+    - name: convert to lower 
+      ansible.builtin.debug:
+        msg: "{{ wishes | lower }}"
+
+- name : find max and morning
+  hosts: localhost
+  vars: 
+    ages: [25,56,89,89]
+  tasks:
+    - name: print minn and max values
+      ansible.builtin.debug:
+        msg: "min value is {{ ages | min }} & max vallu is {{ age | max }}"
