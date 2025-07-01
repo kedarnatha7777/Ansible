@@ -1,0 +1,16 @@
+- name: prompt vari form the prompt 
+  hosts: localhost
+  vars_prompt:
+    - name: course
+      prompt: please enter the course 
+      private: flase 
+    - name: duration 
+      prompt: please enter the duration 
+      private: true 
+    - name: trainner
+      prompt: please enter the trainner name 
+      private: no 
+  tasks:  
+    - name: print for the prompt 
+      ansible.builtin.debug:
+        msg: " hi, course is :{{course}}, Duration is {{duration}} & trainner is {{trainener}}"
