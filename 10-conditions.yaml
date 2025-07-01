@@ -13,4 +13,4 @@
 
     - name: create an user if not existed
       ansible.builtin.command: useradd expense 
-      when: user_expense.re != 0 | int 
+      when: user_expense.rc != 0 | int 
