@@ -9,7 +9,7 @@
 
     - name: user_expense output 
       ansible.builtin.debug:
-        msg: "{{user_expense}}"
+        msg: "user info is {{user_expense}}"
 
     - name: create an user if not existed
       ansible.builtin.command: useradd expense 
