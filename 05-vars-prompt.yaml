@@ -9,7 +9,7 @@
       private: true 
     - name: trainner
       prompt: please enter the trainner name 
-      private: no 
+      private: flase 
   tasks:  
     - name: print for the prompt 
       ansible.builtin.debug:
