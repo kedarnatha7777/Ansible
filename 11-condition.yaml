@@ -1,0 +1,17 @@
+- name : check goven number is grater than 18 
+  hosts: localhost
+  vars_prompt:
+    - name: NUMBER 
+      prompt: please enter the number 
+      private: false 
+  tasks:
+    - name: chcek the goven number in grate than 18 
+      ansible.builtin.debug:
+        msg: given {{NUMBER}} is greater than 18 
+      when: NUMBER > 18 | int 
+
+    - name: check the given number is less than 18
+      ansible.builtin.debug:
+        msg: given number is {{NUMBER}} is less than 18 
+      when: NUMBER < 18 | int 
+      
