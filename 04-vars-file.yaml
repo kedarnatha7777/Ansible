@@ -1,8 +1,8 @@
-- name : variable from file 
+- name : variables from file 
   hosts: localhost
   vars_files:
     - vars.yaml
   tasks: 
     - name: printing from the files 
       ansible.builtin.debug:
-        msg: " Student_name is :{{}}, class is :{{}} & fav subject is :{{fav_subject}} "
+        msg: " Student_name is :{{Student_name}}, class is :{{class}} & fav subject is :{{fav_subject}} "
