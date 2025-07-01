@@ -1,0 +1,21 @@
+- name : datatypes in ansible 
+  hosts: localhost
+  vars:
+    - course: "devops with AWS "
+    - tools:
+      - git 
+      - ansible
+      - shell 
+      - docker 
+      - jenkins 
+      - k8s 
+    - experience:
+      devops: 3 
+      ansible: 1 
+      docker: 4 
+      k8s: 2  
+      
+  tasks:
+    - name: print the data types 
+      ansible.builtin.debug:
+        msg: " we are poviding {{course}} with tools loke {{tools}} but we need with this experience {{experience}}"
