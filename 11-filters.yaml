@@ -30,4 +30,13 @@
   tasks:
     - name: print minn and max values
       ansible.builtin.debug:
-        msg: "min value is {{ ages | min }} & max vallu is {{ age | max }}"
+        msg: "min value is {{ ages | min }}, & max value is {{ age | max }}"
+
+- name : remove duplicates in list 
+  hosts: localhost
+  vars:
+    marks: [ 15, 15, 65, 65, 68]
+  tasks: 
+    - name: remove duplicates
+      ansible.builtin.debug:
+        msg: "{{ marks | unique }}"
