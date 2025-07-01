@@ -9,6 +9,7 @@
       ansible.builtin.debug:
         msg: given {{NUMBER}} is greater than 18 
       when: NUMBER > 18 | int 
+      ignore_errors: true 
 
     - name: check the given number is less than 18
       ansible.builtin.debug:
