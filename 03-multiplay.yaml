@@ -1,4 +1,3 @@
----
 - name : multi play -01 
   hosts: localhost 
   tasks:
@@ -13,4 +12,4 @@
       ansible.builtin.debug:
         msg: "from play-01 and task -02 "
 
----
+
