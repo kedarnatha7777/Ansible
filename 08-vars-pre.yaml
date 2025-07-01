@@ -5,10 +5,10 @@
 
   vars_files:
     - vars.yaml
-  vars_prompt:
-    - name: wish 
-      prompt: please enter the wish 
-      private: false 
+  # vars_prompt:
+  #   - name: wish 
+  #     prompt: please enter the wish 
+  #     private: false 
   tasks:
     - name: checking the variable preference 
       vars:
@@ -17,4 +17,4 @@
         msg: "hello ramesh .. {{wish}}"
 
 
-# 1 st pre is Arguments , task level ,   
+# 1 st pre is Arguments , task level , variable file , prompt ,   
