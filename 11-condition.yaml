@@ -8,12 +8,12 @@
     - name: chcek the given number in grate than 18 
       ansible.builtin.debug:
         msg: given {{NUMBER}} is greater than 18 
-      when: NUMBER > 18 | int 
+      when: NUMBER | int  > 18 
       
 
     - name: check the given number is less than 18
       ansible.builtin.debug:
         msg: given number is {{NUMBER}} is less than 18 
-      when: NUMBER < 18 | int 
+      when: NUMBER | int  < 18  
       
       
