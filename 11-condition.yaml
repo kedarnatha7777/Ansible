@@ -5,15 +5,15 @@
       prompt: please enter the number 
       private: false 
   tasks:
-    - name: chcek the goven number in grate than 18 
+    - name: chcek the given number in grate than 18 
       ansible.builtin.debug:
         msg: given {{NUMBER}} is greater than 18 
       when: NUMBER > 18 | int 
-      ignore_errors: true 
+      
 
     - name: check the given number is less than 18
       ansible.builtin.debug:
         msg: given number is {{NUMBER}} is less than 18 
       when: NUMBER < 18 | int 
-      ignore_errors: true 
+      
       
