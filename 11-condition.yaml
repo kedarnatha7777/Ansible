@@ -14,4 +14,5 @@
       ansible.builtin.debug:
         msg: given number is {{NUMBER}} is less than 18 
       when: NUMBER < 18 | int 
+      ignore_errors: true 
       
