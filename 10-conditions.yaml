@@ -3,7 +3,7 @@
   tasks:
     - name: check an user is existed or not  
       ansible.builtin.command: id expense 
-      ignore_error: yes 
+      ignore_error: true 
 
     - name: print some thing
       ansible.builtin.debug:
