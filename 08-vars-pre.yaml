@@ -17,4 +17,4 @@
         msg: "hello ramesh .. {{wish}}"
 
 
-# 1 st pre is Arguments , task level , variable file , prompt , inventory ,    
+# 1 st pre is Arguments , task level , variable file , prompt ,  play level , inventory , role level  
