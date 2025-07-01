@@ -22,16 +22,6 @@
     - name: convert to lower 
       ansible.builtin.debug:
         msg: "{{ wishes | lower }}"
-
-- name : find max and morning
-  hosts: localhost
-  vars: 
-    ages: [10, 45, 65, 25, 65, 88]
-  tasks:
-    - name: print minn and max values
-      ansible.builtin.debug:
-        msg: "min value is {{ ages | min }}, & max value is {{ age | max }}"
-
 - name : remove duplicates in list 
   hosts: localhost
   vars:
@@ -40,3 +30,12 @@
     - name: remove duplicates
       ansible.builtin.debug:
         msg: "{{ marks | unique }}"
+
+- name : find max and min
+  hosts: localhost
+  vars: 
+    ages: [10, 45, 65, 25, 65, 88]
+  tasks:
+    - name: print min and max values
+      ansible.builtin.debug:
+        msg: "min value is {{ ages | min }}, & max value is {{ age | max }}"
