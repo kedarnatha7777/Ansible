@@ -26,7 +26,7 @@
 - name : find max and morning
   hosts: localhost
   vars: 
-    ages: [25,56,89,89]
+    ages: [10, 45, 65, 25, 65, 88]
   tasks:
     - name: print minn and max values
       ansible.builtin.debug:

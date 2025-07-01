@@ -2,14 +2,14 @@
   hosts: localhost
   vars:
     - course: "devops with AWS "
-    - tools:
+    - tools: # list 
       - git 
       - ansible
       - shell 
       - docker 
       - jenkins 
       - k8s 
-    - experience:
+    - experience: #map 
        devops: 3 
        ansible: 1 
        docker: 4 
