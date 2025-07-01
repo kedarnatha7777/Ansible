@@ -12,7 +12,7 @@
   tasks:
     - name: convet in to upper 
       ansible.builtin.debug:
-        msg: "{{ wishes | UPPER }}"
+        msg: "{{ wishes | upper }}"
   
 - name: convert upper to lower 
   hosts: localhost
