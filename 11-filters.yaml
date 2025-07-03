@@ -53,7 +53,7 @@
       ansible.builtin.debug:
         msg: "before convertiong {{my_dict}}"
 
-        
+
     - name: convert the dict to items 
       ansible.builtin.debug:
         msg: "convertion of dict to iteams {{my_dict | dict2items }}"
@@ -62,11 +62,10 @@
   hosts: localhost
   vars:
     tools: 
-      - ansible 
-      - git 
-      - docker 
-      - k8s 
-      - shell
+    [ {'key': 'docker', 'value': '2yars'},
+      {'key': 'k8s', 'value': '1 year'}, 
+      {'key': 'jenkins', 'value': '2 yars'}
+    ]
   tasks:
     - name: convert list to dictonary 
       ansible.builtin.dnf:
