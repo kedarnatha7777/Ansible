@@ -1,0 +1,12 @@
+- name:  loop demo 
+  hosts: localhost
+  become: yes 
+  tasks:
+    - name: based on the state update the packages 
+      ansible.builtin.dnf:
+        name: {{item.name}}
+        state: {{item.state}}
+      loop:
+        - { name: 'mysql', state: latest } # loop 
+        - { name: 'gcc', state: 'absent' }
+        - { name: 'nginx', state: 'latest '}
