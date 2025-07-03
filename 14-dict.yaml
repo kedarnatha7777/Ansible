@@ -3,7 +3,7 @@
   tasks:
     - name: print the dict
       ansible.builtin.debug:
-        msg:  "hello tools is {{}} & state is {{}}"
+        msg:  "hello tools is {{my_dict.key}} & state is {{my_dict.value}}"
       my_dict:  
         - git: 'latest'
         - ansible: 'latest'
