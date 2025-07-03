@@ -61,11 +61,11 @@
 - name : convert list to dictonary 
   hosts: localhost
   vars:
-    tools: 
-    [ {'key': 'docker', 'value': '2yars'},
-      {'key': 'k8s', 'value': '1 year'}, 
-      {'key': 'jenkins', 'value': '2 yars'}
-    ]
+    tools:
+     -  {'key': 'docker', 'value': '2yars'}
+     -  {'key': 'k8s', 'value': '1 year'}
+     -  {'key': 'jenkins', 'value': '2 yars'}
+    
   tasks:
     - name: convert list to dictonary 
       ansible.builtin.dnf:
