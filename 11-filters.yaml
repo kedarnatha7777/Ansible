@@ -41,6 +41,23 @@
         msg: "min value is {{ ages | min }}, & max value is {{ ages | max }}"
 
 
+- name : converet dict to list 
+  hosts: localhost
+  vars: 
+    my_dict:
+      docker: 2yars 
+      k8s: 1 year 
+      jenkins: 2 yars 
+  tasks: 
+    - name: before "convertion
+      ansible.builtin.debug:
+        msg: "before convertiong {{my_dict}}"
+
+        
+    - name: convert the dict to items 
+      ansible.builtin.debug:
+        msg: "convertion of dict to iteams {{my_dict | dict2items }}"
+
 - name : convert list to dictonary 
   hosts: localhost
   vars:
@@ -54,3 +71,6 @@
     - name: convert list to dictonary 
       ansible.builtin.dnf:
         msg: "list to dictonary is {{ tools | item2dict }}"
+
+
+  
