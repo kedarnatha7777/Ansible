@@ -1,0 +1,13 @@
+- name : install some packages 
+  hosts: localhost
+  tasks:
+    - name: install the list of packages 
+      ansible.builtin.dnf:
+         name: "{{item}}"
+         state: present
+      loop:
+        - mysql 
+        - git 
+        - gcc  
+    
+        
