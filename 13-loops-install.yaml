@@ -1,5 +1,6 @@
 - name : install some packages 
   hosts: localhost
+  become: yes 
   tasks:
     - name: install the list of packages 
       ansible.builtin.dnf:
