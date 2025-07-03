@@ -69,7 +69,7 @@
   tasks:
     - name: convert list to dictonary 
       ansible.builtin.dnf:
-        msg: "list to dictonary is {{ tools | item2dict }}"
+        msg: "list to dictonary is {{ tools | items2dict }}"
 
 
   
