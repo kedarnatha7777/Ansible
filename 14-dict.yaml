@@ -1,6 +1,13 @@
 - name: demo on dict 
   hosts: localhost
+  my_dict:  
+        - git: 'latest'
+        - ansible: 'latest'
+        - gcc: 'absent'
   tasks:
+    - name: print the dict 
+      ansible.builtin.debug:
+        msg: "{{my_dict}}"
     - name: print the dict
       ansible.builtin.debug:
         msg:  "hello tools are {{my_dict.key}} & state is {{my_dict.value}}"
